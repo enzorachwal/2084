@@ -63,12 +63,12 @@
         </div>
     </div>   
     <section class="section">
-      <h1 class="title"> Condições Médicas Relevantes </h1>   <b-field label="">
+      <h1 class="title has-text-primary"> Condições Médicas Relevantes </h1>   <b-field label="">
              <b-input maxlength="200" type="textarea"></b-input>
           </b-field>
       </section>
           <section class="section">
-      <h1 class="title"> Histórico Médico </h1>
+      <h1 class="title has-text-primary"> Histórico Médico </h1>
          <b-field label="">
              <b-input maxlength="200" type="textarea"></b-input>
           </b-field>

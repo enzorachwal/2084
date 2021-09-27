@@ -13,14 +13,17 @@
             <b-navbar-item href="#/" class="has-text-white">
                 Home
             </b-navbar-item>
-            <b-navbar-item href="#/contato" class="has-text-white">
-                Contato
+            <b-navbar-item href="#/agenda" class="has-text-white">
+                Consultas
             </b-navbar-item>
                     <b-navbar-item href="#/perfil" class="has-text-white">
                 Perfil
+              </b-navbar-item>  
+              <b-navbar-item href="#/medicopov" class="has-text-white">
+                Médico 
             </b-navbar-item>  
-                    <b-navbar-item href="#/agenda" class="has-text-white">
-                Consultas
+                    <b-navbar-item href="#/contato" class="has-text-white">
+                Contato
             </b-navbar-item>
                 <b-navbar-item href="https://www.fae.edu/" class="has-text-white">
                 Site da Fae
