@@ -30,31 +30,31 @@
   <div class="field">
     <label class="label">Tipo Sanguíneo</label>
     <div class="control">
-      <input class="input" type="password" placeholder="********">
+      <input class="input" placeholder=" ">
     </div>
   </div>
     <div class="field">
     <label class="label">Idade</label>
     <div class="control">
-      <input class="input" type="password" placeholder="********">
+      <input class="input" placeholder=" ">
     </div>
   </div>
   <div class="field">
     <label class="label">R.G.</label>
     <div class="control">
-      <input class="input" type="password" placeholder="********">
+      <input class="input" placeholder="00.000.000-0">
     </div>
   </div>
   <div class="field">
     <label class="label">CPF</label>
     <div class="control">
-      <input class="input">
+      <input class="input" placeholder="000.000.000-00">
     </div>
   </div>
   <div class="field">
     <label class="label">Email</label>
     <div class="control">
-      <input class="input" type="email" placeholder="e.g. alex@example.com">
+      <input class="input" type="email" placeholder=" alex@example.com">
     </div>
   </div>
 
@@ -66,12 +66,21 @@
       <h1 class="title has-text-primary"> Condições Médicas Relevantes </h1>   <b-field label="">
              <b-input maxlength="200" type="textarea"></b-input>
           </b-field>
+          <div class="buttons">
+             <b-button type="is-primary is-light">Salvar </b-button>  
+
+          </div>  
       </section>
           <section class="section">
       <h1 class="title has-text-primary"> Histórico Médico </h1>
          <b-field label="">
              <b-input maxlength="200" type="textarea"></b-input>
           </b-field>
+
+          <div class="buttons">
+             <b-button type="is-primary is-light">Salvar </b-button>  
+
+          </div>   
       </section>
     </section>
 

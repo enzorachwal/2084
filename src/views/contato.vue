@@ -20,7 +20,12 @@
           <b-field label="Message">
               <b-input maxlength="200" type="textarea"></b-input>
           </b-field>
+              <div class="buttons">
+             <b-button type="is-primary ">Enviar</b-button>  
+
+          </div> 
       </section>
+      
 
     </section>
 </template>
