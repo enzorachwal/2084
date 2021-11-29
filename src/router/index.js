@@ -6,6 +6,8 @@ import Perfil from '@/views/perfil.vue';
 import Agenda from '@/views/agenda.vue';
 import Contato from '@/views/contato.vue';
 import Medico from '@/views/medicopov.vue'
+import Duvidas from '@/views/duvidas.vue';
+import MedicoCadastro from '@/views/medico.vue';
 
 const routes = [
     {
@@ -36,6 +38,18 @@ const routes = [
         path: '/medicopov',
         name: 'Médico',
         component: Medico,
+        meta: {  }
+    },
+    {
+        path: '/duvidas',
+        name: 'Duvidas',
+        component: Duvidas,
+        meta: {  }
+    },
+    {
+        path: '/medico',
+        name: 'MedicoCadastro',
+        component: MedicoCadastro,
         meta: {  }
     }
 ]

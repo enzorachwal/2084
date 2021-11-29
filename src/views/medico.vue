@@ -23,50 +23,28 @@
   <div class="field">
     <label class="label">Nome Completo</label>
     <div class="control">
-  
-      <input class="input" v-model='paciente.nome' >
+      <input class="input" v-model='medico.nome' >
     </div>
   </div>
 
-  <div class="field">
-    <label class="label">Tipo Sanguíneo</label>
-    <div class="control">
-      <input class="input" placeholder=" " v-model='paciente.sangue'>
-    </div>
-  </div>
     <div class="field">
-    <label class="label">Idade</label>
+    <label class="label">Especiaplidade</label>
     <div class="control">
-      <input class="input" placeholder=" " v-model='paciente.idade'>
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">R.G.</label>
-    <div class="control">
-      <input class="input" placeholder="00.000.000-0" v-model='paciente.rg'>
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">CPF</label>
-    <div class="control">
-      <input class="input" placeholder="000.000.000-00" v-model='paciente.cpf'>
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control">
-      <input class="input" type="email" placeholder=" alex@example.com" v-model='paciente.email'>
+      <input class="input" placeholder=" " v-model='medico.especialidade'>
     </div>
   </div>
 
+  <div class="field">
+    <label class="label">CRM</label>
+    <div class="control">
+      <input class="input" placeholder="00000" v-model='medico.crm'>
+    </div>
+  </div>
 
 </form>
         </div>
     </div>   
-    <section class="section">
-      <h1 class="title has-text-primary"> Condições Médicas Relevantes </h1>   <b-field label="">
-             <b-input maxlength="200" type="textarea" v-model='paciente.condicoesMedicas'></b-input>
-          </b-field>
+
           <div class="buttons">
              <b-button type="is-primary is-light" @click='cadastrar'>Salvar</b-button>  
 
@@ -74,7 +52,6 @@
       </section>
 
 
-    </section>
 
        
    
@@ -87,7 +64,7 @@ export default {
     props: ['canCancel'],
     data(){
         return {
-            paciente: {
+            medico: {
 
             },
         
@@ -102,7 +79,7 @@ export default {
       cadastrar() {
           var self = this;
           //Chama a api para criar o usuário
-          this.axios.post('create-paciente/', this.paciente).then((response) => {
+          this.axios.post('create-medico/', this.medico).then((response) => {
             console.log(response);
             //Fecha o modal
             self.$emit('close');

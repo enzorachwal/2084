@@ -21,33 +21,26 @@
     </section>
 
     <section>
-<table class="table">
+<table class="table is-bordered is-striped is-hoverable is-fullwidth">
   <thead>
     <tr>
       <th>Data</th>
       <th>Hora</th>
       <th>Local</th>
+      <th>Médico</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>10/10/2021</th>
-      <td>16h10</td>
-      <td>Hospital dos olhos</td>
+    <tr v-for='(consulta,index) in consultas' :key='index' >
+      <th>{{consulta.data}}</th>
+      <td>{{consulta.hora}}</td>
+      <td>{{consulta.local}}</td>
+      <td>
+        {{consulta.medico.nome}} - {{consulta.medico.crm}}
+      </td>
 
     </tr>
-    <tr>
-      <th>16/10/2021</th>
-      <td>14h30</td>
-      <td>IPO</td>
 
-    </tr>
-        <tr>
-      <th>21/11/2021</th>
-      <td>17h00</td>
-      <td>Hospital das Graças</td>
-
-    </tr>
   </tbody>
   </table>  
     </section>
@@ -58,7 +51,23 @@
 </template>
 
 <script>
-
+    export default {
+        data() {
+            return {
+                consultas: []
+            }
+        },
+        
+        created() {
+          var self = this;
+          this.axios.get('consultas/').then((response) => {
+            self.consultas = response.data;
+          })
+        }
+        
+        
+        
+    }
 
 
 </script>

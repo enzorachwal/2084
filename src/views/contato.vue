@@ -8,20 +8,21 @@
 
         <section class="section">
         <b-field label="Digite seu Nome">
-            <b-input placeholder=" " rounded></b-input>
+    
+            <b-input v-model='contato.nome' placeholder=" " rounded></b-input>
         </b-field>
 
         <b-field label="Digite seu E-mail">
-            <b-input type="email" rounded>
+            <b-input v-model='contato.email' type="email" rounded>
             </b-input>
         </b-field>  
 
 
           <b-field label="Message">
-              <b-input maxlength="200" type="textarea"></b-input>
+              <b-input v-model='contato.mensagem' maxlength="200" type="textarea"></b-input>
           </b-field>
               <div class="buttons">
-             <b-button type="is-primary ">Enviar</b-button>  
+             <b-button @click='enviar' type="is-primary ">Enviar</b-button>  
 
           </div> 
       </section>
@@ -31,11 +32,34 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                name: 'John Silver'
-            }
+export default {
+    props: ['canCancel'],
+    data(){
+        return {
+            contato: {
+
+            },
+        
         }
-    }
+    },  
+    created() {
+     
+      //Chama a api para buscar as cidades
+
+    },
+    methods: {
+      enviar() {
+          var self = this;
+          //Chama a api para criar o usuário
+          this.axios.post('create-contato/', this.contato).then((response) => {
+            self.contato={};
+            console.log(response);
+            //Fecha o modal
+            self.$emit('close');
+            //Mostra a mensagem de sucesso
+            self.$buefy.dialog.alert('Email enviado!')
+          })        
+      }
+    }  
+}
 </script>
