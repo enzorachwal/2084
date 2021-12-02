@@ -29,13 +29,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDKy-x2Znq5JUS1gB75UEl3rgzWBvqDTFs",
-  authDomain: "cuide-cc789.firebaseapp.com",
-  projectId: "cuide-cc789",
-  storageBucket: "cuide-cc789.appspot.com",
-  messagingSenderId: "780548426367",
-  appId: "1:780548426367:web:98dea55b276ca97bca8d4a",
-  measurementId: "G-1HP1CP052H"
+  apiKey: "AIzaSyCv-UI5tF0hkJJ0O0wUrjjh1tuPW8PD9G8",
+  authDomain: "cuide-bd488.firebaseapp.com",
+  projectId: "cuide-bd488",
+  storageBucket: "cuide-bd488.appspot.com",
+  messagingSenderId: "467714524922",
+  appId: "1:467714524922:web:35c549400441450926eb43",
+  measurementId: "G-FSTTMGBM1V"
 };
 
 // Initialize Firebase

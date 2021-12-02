@@ -3,7 +3,7 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       '^/api': {
-        target: 'https://2086backend.juancosta.repl.co',
+        target: 'https://testedjango.robsonjoo.repl.co',
         ws: true,
         changeOrigin: true
       },
